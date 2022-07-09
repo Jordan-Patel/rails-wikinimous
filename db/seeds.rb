@@ -7,10 +7,12 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Article.destroy_all
+
 puts 'Creating seeds'
 10.times {
-  Article.create( title: Faker::DcComics.title,
-                  content: Faker::Lorem.paragraphs(number: 3))
+  Article.create( title: Faker::Hipster.sentence,
+                  content: Faker::Hipster.paragraphs(number: 4))
 }
 
 puts 'Done!'
